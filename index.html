@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice 2-Player Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Dice 2-Player Game</h1>
+    <div id="root">
+
+        <div class="player1">
+            <h4>P1</h4>
+            <div class="score1">0</div>
+        </div>
+        <div class="player2">
+            <h4>P2</h4>
+            <div class="score2">0</div>
+        </div>
+        <div class="gamemaster">
+            <h4>Gamemaster</h4>
+            
+            <div class="dices">
+                <div class="dice1">0</div>
+                <div class="dice2">0</div>
+            </div>
+            <button class="btn rolldice">Roll dice</button>
+            <button class="btn stop">Stop count</button>
+            <button class="btn newgame">New game</button>
+            <details>
+                <summary>Rules</summary>
+                <p><b>1.</b> Player 1 starts first on the left.</p>
+                <p><b>2.</b> Each player has their own bank in which they collect points</p>
+                <p><b>3.</b> Gamemaster rolls the dice and tallies the total of points
+                    obtained by the dice. So, GM can click the button to roll the dice and randomly collect points in
+                    players cash register until they say stop.</p>
+                <p><b>4.</b> Now you are wondering why stop? Let's introduce a bit of risk, and if the number 1 comes out, the
+                    cash register is reset to 0, and if the number 6 comes out, it goes to the next player with the
+                    reset of only the points won in the current roll. For example, I have 24 and I roll I get a 4 so 5
+                    and I get a six and nothing I'm left on 24 and the roll goes to the next one.</p>
+                <p><b>5.</b> The winner is whoever gets to 101 first!</p>
+            </details>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
