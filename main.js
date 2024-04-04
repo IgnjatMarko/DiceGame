@@ -37,7 +37,13 @@ btnRoll.addEventListener("click", function () {
   }
 
   if (playerScores[currentPlayer - 1] >= 101) {
-    alert(`Player ${currentPlayer} wins with ${playerScores[currentPlayer - 1]} points! Starting a new game.`);
+    alert(
+      `Player ${currentPlayer} wins with ${
+        playerScores[currentPlayer - 1]
+      } points! Starting a new game.`
+    );
+
+    jsConfetti.addConfetti();
 
     playerScores = [0, 0];
     scoreP1.textContent = 0;
@@ -53,24 +59,38 @@ btnRoll.addEventListener("click", function () {
   outlineP2.classList.toggle("active", currentPlayer === 2);
 });
 
-btnStop.addEventListener("click", function(){
-    alert("Switching players.");
-    currentPlayer = currentPlayer === 1 ? 2 : 1;
-    
-    outlineP1.classList.toggle("active", currentPlayer === 1);
-    outlineP2.classList.toggle("active", currentPlayer === 2);
+btnStop.addEventListener("click", function () {
+  alert("Switching players.");
+  currentPlayer = currentPlayer === 1 ? 2 : 1;
 
+  outlineP1.classList.toggle("active", currentPlayer === 1);
+  outlineP2.classList.toggle("active", currentPlayer === 2);
 });
 
 btnNewGame.addEventListener("click", function () {
+  playerScores = [0, 0];
+  scoreP1.textContent = 0;
+  scoreP2.textContent = 0;
 
-    playerScores = [0, 0];
-    scoreP1.textContent = 0;
-    scoreP2.textContent = 0;
-  
-    currentPlayer = 1;
-    outlineP1.classList.add("active");
-    outlineP2.classList.remove("active");
-  
-    alert("New game started.");
-  });
+  dice1.textContent = 0;
+  dice2.textContent = 0;
+
+  currentPlayer = 1;
+  outlineP1.classList.add("active");
+  outlineP2.classList.remove("active");
+
+  alert("New game started.");
+});
+
+const canvas = document.getElementById("custom_canvas");
+const button = document.getElementById("button");
+
+const jsConfetti = new JSConfetti({ canvas });
+
+setTimeout(() => {
+  jsConfetti.addConfetti();
+}, 500);
+
+button.addEventListener("click", () => {
+  jsConfetti.addConfetti();
+});

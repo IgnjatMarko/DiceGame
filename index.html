@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice 2-Player Game</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
         </div>
         <div class="gamemaster">
             <h4>Gamemaster</h4>
-            
+
             <div class="dices">
                 <div class="dice1">0</div>
                 <div class="dice2">0</div>
@@ -37,7 +38,8 @@
                 <p><b>3.</b> Gamemaster rolls the dice and tallies the total of points
                     obtained by the dice. So, GM can click the button to roll the dice and randomly collect points in
                     players cash register until they say stop.</p>
-                <p><b>4.</b> Now you are wondering why stop? Let's introduce a bit of risk, and if the number 1 comes out, the
+                <p><b>4.</b> Now you are wondering why stop? Let's introduce a bit of risk, and if the number 1 comes
+                    out, the
                     cash register is reset to 0, and if the number 6 comes out, it goes to the next player with the
                     reset of only the points won in the current roll. For example, I have 24 and I roll I get a 4 so 5
                     and I get a six and nothing I'm left on 24 and the roll goes to the next one.</p>
@@ -45,6 +47,10 @@
             </details>
         </div>
     </div>
+    <footer>
+        <button id="button" class="btn">Confetti!</button>
+    </footer>
+    
     <script src="main.js"></script>
 </body>
 
