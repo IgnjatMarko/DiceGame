@@ -7,6 +7,9 @@
     <title>Dice 2-Player Game</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Seymour+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -31,26 +34,28 @@
             <button class="btn rolldice">Roll dice</button>
             <button class="btn stop">Stop count</button>
             <button class="btn newgame">New game</button>
-            <details>
-                <summary>Rules</summary>
-                <p><b>1.</b> Player 1 starts first on the left.</p>
-                <p><b>2.</b> Each player has their own bank in which they collect points</p>
-                <p><b>3.</b> Gamemaster rolls the dice and tallies the total of points
-                    obtained by the dice. So, GM can click the button to roll the dice and randomly collect points in
-                    players cash register until they say stop.</p>
-                <p><b>4.</b> Now you are wondering why stop? Let's introduce a bit of risk, and if the number 1 comes
-                    out, the
-                    cash register is reset to 0, and if the number 6 comes out, it goes to the next player with the
-                    reset of only the points won in the current roll. For example, I have 24 and I roll I get a 4 so 5
-                    and I get a six and nothing I'm left on 24 and the roll goes to the next one.</p>
-                <p><b>5.</b> The winner is whoever gets to 101 first!</p>
-            </details>
         </div>
+    </div>
+    <div class="extra">
+        <details>
+            <summary>Rules</summary>
+            <p><b>1.</b> Player 1 starts first on the left.</p>
+            <p><b>2.</b> Each player has their own bank in which they collect points</p>
+            <p><b>3.</b> Gamemaster rolls the dice and tallies the total of points
+                obtained by the dice. So, GM can click the button to roll the dice and randomly collect points in
+                players cash register until they say stop.</p>
+            <p><b>4.</b> Now you are wondering why stop? Let's introduce a bit of risk, and if the number 1 comes
+                out, the
+                cash register is reset to 0, and if the number 6 comes out, it goes to the next player with the
+                reset of only the points won in the current roll. For example, I have 24 and I roll I get a 4 so 5
+                and I get a six and nothing I'm left on 24 and the roll goes to the next one.</p>
+            <p><b>5.</b> The winner is whoever gets to 101 first!</p>
+        </details>
     </div>
     <footer>
         <button id="button" class="btn">Confetti!</button>
     </footer>
-    
+
     <script src="main.js"></script>
 </body>
 
